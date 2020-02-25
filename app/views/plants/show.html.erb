@@ -1,12 +1,15 @@
-<%= form_for([@plant, @booking]) do |f| %>
 
-  <%= f.text_field :start_date, placeholder: 'Start Date', class: 'form-control', readonly: 'true' %>
-  <%= f.text_field :end_date, placeholder: 'End Date', class: 'form-control', disabled: 'true', readonly: 'true'  %>
+<h2><strong>Name</strong></h2>
+<%= @plant.name %>
+<h5><strong>Description</strong></h5>
+<%= @plant.description %>
+<h5>Booking(s)</h5>
 
+<%= link_to "Edit", edit_plant_path(@plant), class: "btn btn-info" %>
+<%= link_to "Delete", plant_path(@plant), method: :delete, class: "btn btn-danger" %>
+<%= link_to "Back", plants_path, class: "btn btn-primary" %>
 
   <%= f.hidden_field :plant_id, value: @plant.id %>
   <%= f.input :photo, as: :file %>
 
 
-  <%= f.submit "Book Now", class: "btn btn-primary" %>
-<% end %>
