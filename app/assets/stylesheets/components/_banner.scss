@@ -4,6 +4,8 @@
   height: 100vh;
   color: #eee;
   text-align: center;
+  justify-content: center;
+  text-align: center;
   padding-top: 40vh;
   padding: 0 auto;
   color: white;
@@ -13,6 +15,10 @@ h1 {
   font-weight: 700;
 }
 
-.form_home {
-  padding-top: 40px;
+.form-center {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
