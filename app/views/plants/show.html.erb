@@ -1,13 +1,8 @@
-<%= form_for([@plant, @booking]) do |f| %>
 
-  <%= f.text_field :start_date, placeholder: 'Start Date', class: 'form-control', readonly: 'true' %>
-  <%= f.text_field :end_date, placeholder: 'End Date', class: 'form-control', disabled: 'true', readonly: 'true'  %>
+<h2><strong>Name</strong></h2>
+<%= @plant.name %>
+<h5><strong>Description</strong></h5>
+<%= @plant.description %>
+<h5>Booking(s)</h5>
 
-
-  <%= f.hidden_field :plant_id, value: @plant.id %>
-  <%= f.hidden_field :price, value: @plant.price %>
-  <%= f.hidden_field :total, value: 'booking_total' %>
-
-
-  <%= f.submit "Book Now", class: "btn btn-primary" %>
-<% end %>
+<%= link_to "Back", plants_path, class: "btn btn-primary" %>
