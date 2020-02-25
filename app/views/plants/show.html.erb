@@ -9,4 +9,7 @@
 <%= link_to "Delete", plant_path(@plant), method: :delete, class: "btn btn-danger" %>
 <%= link_to "Back", plants_path, class: "btn btn-primary" %>
 
+  <%= f.hidden_field :plant_id, value: @plant.id %>
+  <%= f.input :photo, as: :file %>
+
 
