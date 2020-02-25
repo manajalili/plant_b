@@ -26,5 +26,4 @@ class PlantsController < ApplicationController
   def plant_params
     params.require(:plant).permit(:name, :description)
   end
-
 end
