@@ -10,8 +10,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = current_user.bookings.create(booking_params)
-
+    @booking = Booking.new(booking_params)
+    @booking.save!
     redirect_to @booking.plant, notice: "Your booking has been created..."
   end
 
