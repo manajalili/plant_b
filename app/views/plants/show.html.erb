@@ -5,8 +5,7 @@
 
 
   <%= f.hidden_field :plant_id, value: @plant.id %>
-  <%= f.hidden_field :price, value: @plant.price %>
-  <%= f.hidden_field :total, value: 'booking_total' %>
+  <%= f.input :photo, as: :file %>
 
 
   <%= f.submit "Book Now", class: "btn btn-primary" %>
