@@ -1,0 +1,12 @@
+<h1>Editing Plant</h1>
+<%= form_for @plant do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+
+  <%= t.submit %>
+<% end %>
+<%= link_to "Show", @plant %>
+<%= link_to "Back", plants_path %>

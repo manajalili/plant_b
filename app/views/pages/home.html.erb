@@ -1,6 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOMEPAGE</title>
+</head>
+<body>
+  <div class='home-banner'>
+    <h1>Plant B</h1>
+    <h3>Need to rent a greenie leafy? Look for it here:</h3>
+    <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+    <%= f.input :name, input_html: {value: "Geenie leafie"} %>
+    <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
+</div>
 
-
-<!--  this is alot of usefull code that im working on.. this is super super effective
- please dont erase -->
+</body>
+</html>
