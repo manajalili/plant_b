@@ -4,12 +4,19 @@
 <h5><strong>Description</strong></h5>
 <%= @plant.description %>
 <h5>Booking(s)</h5>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= booking.date %></li>
+  <% end %>
+</ul>
 
 <%= link_to "Edit", edit_plant_path(@plant), class: "btn btn-info" %>
 <%= link_to "Delete", plant_path(@plant), method: :delete, class: "btn btn-danger" %>
 <%= link_to "Back", plants_path, class: "btn btn-primary" %>
 
+<h3>Book This Plant</h3>
+<%= simple_form_for([@plant, @booking]) do |f| %>
   <%= f.hidden_field :plant_id, value: @plant.id %>
-  <%= f.input :photo, as: :file %>
-
-
+  <%= f.input :date %>
+  <%= f.button :submit %>
+<% end %>
