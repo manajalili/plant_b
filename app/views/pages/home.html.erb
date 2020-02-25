@@ -7,11 +7,16 @@
 <body>
   <div class='home-banner'>
     <h1>Plant B</h1>
-    <h3>Need to rent a greenie leafy? Look for it here:</h3>
-    <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-    <%= f.input :name, input_html: {value: "Geenie leafie"} %>
-    <%= f.submit "Search", class: "btn btn-primary" %>
-<% end %>
+    <h3>Need to rent a greenie leafie? Look for it here:</h3>
+
+    <div class="form_home">
+      <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+        <div class="form-center">
+          <%= f.input :name, input_html: {value: "Greenie leafie"}, label: false %>
+          <%= f.submit "Search", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+  </div>
 </div>
 
 </body>
