@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="plants">
+  <% @plants.each do |plant| %>
+  <div class="plant">
+  <%= link_to plant.name, plant_path(plant) %>
+  </div>
+  <% end %>
+</div>
+</div>
