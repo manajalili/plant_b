@@ -1,7 +1,11 @@
 .plant {
-    height: 200px;
-    background-color: #F4E9D2;
+    text-align: center;
+    background-color: rgba(212, 243, 176, 0.726);
     border-radius: 5px;
     padding: 8px;
 }
 
+.name {
+    font-weight: Bold ;
+    color: green($color: #023f23);
+}
