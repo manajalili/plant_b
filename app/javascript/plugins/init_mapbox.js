@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import mapboxgl from 'mapbox-gl';
 
 const mapElement = document.getElementById('map');
@@ -18,6 +19,10 @@ const addMarkersToMap = (map, markers) => {
       .addTo(map);
   });
 };
+=======
+const initMapbox = () => {
+  const mapElement = document.getElementById('map');
+>>>>>>> 287f5ff0f5ea622f8d68be015a8737b90a21ae41
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
