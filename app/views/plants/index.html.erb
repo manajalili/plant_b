@@ -1,20 +1,15 @@
 <div class="container">
   <div class="plants">
-  <% @plants.each do |plant| %>
-  <div class="plant">
-  <%= link_to plant.name, plant_path(plant) %>
+    <% @plants.each do |plant| %>
+      <div class="plant">
+        <%= cl_image_tag plant.photo.key, height: 400, width: 400, crop: :fill %>
+          <div class="name">
+            <%= link_to plant.name, plant_path(plant) %>
+          </div>
+          <%= plant.description %>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
 </div>
 
-
-
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
 

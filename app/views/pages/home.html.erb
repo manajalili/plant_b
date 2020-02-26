@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <title>HOMEPAGE</title>
 </head>
+
 <body>
+
   <div class='home-banner'>
     <h1>Plant B</h1>
     <h3>Need to rent a greenie leafie? Look for it here:</h3>
 
-    <div class="form_home">
-      <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-        <div class="form-center">
-          <%= f.input :name, input_html: {value: "Greenie leafie"}, label: false %>
-          <%= f.submit "Search", class: "btn btn-primary" %>
-        </div>
-    <% end %>
-  </div>
+     <div class="form-inline justify-content-center">
+       <%= form_tag plants_path, method: :get do %>
+       <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Greenie Leafie"
+      %>
+      <%= submit_tag "Search", class: "btn btn-success" %>
+      <% end %>
+     </div>
 </div>
 
 </body>

@@ -1,15 +1,22 @@
 class PlantsController < ApplicationController
-  def index
-      @flats = Flat.geocoded
 
-      @markers = @flats.map do |flat|
-        {
-          lat: flat.latitude,
-          lng: flat.longitude,
-          infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
-        }
-      end
+  def index
+    @plants = Plant.geocoded
+
+    @markers = @plants.map do |plant|
+      {
+        lat: plant.latitude,
+        lng: plant.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { flat: flat }),
+      }
     end
+
+    if params[:query].present?
+      @plants = Plant.where(name: params[:query])
+    else
+      @plants = Plant.all
+    end
+  end
 
   def show
     @booking = Booking.new

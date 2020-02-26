@@ -5,6 +5,7 @@ class Plant < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :description, presence: true
+
   geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_latitude? || :will_save_change_to_longitude?
+  after_validation :geocode, if: :will_save_change_to_address?
 end
