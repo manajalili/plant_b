@@ -1,7 +1,15 @@
 class PlantsController < ApplicationController
   def index
-    @plants = Plant.all
-  end
+      @flats = Flat.geocoded
+
+      @markers = @flats.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
+        }
+      end
+    end
 
   def show
     @booking = Booking.new

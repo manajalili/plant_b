@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }]).
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "open-uri"
@@ -18,10 +18,10 @@ user_four = User.create!(email: "mattia@gmail.com" , password: "123456")
 user_three = User.create!(email: "mason@gmail.com" , password: "123456")
 
 
-plant_one = Plant.create!(name:"orchids", description:"its a very nice orchid plant", user: user_one )
-plant_two =Plant.create!(name:"bamboo", description:"very beautiful bamboo plant", user: user_two )
-plant_three =Plant.create!(name:"boston fern", description:"It's fantastic fern plant", user: user_three )
-plant_four =Plant.create!(name:"palm", description:"its a very palm plant", user: user_four )
+plant_one = Plant.create!(name:"orchids", description:"its a very nice orchid plant", user: user_one, address: "Gendarmenmarkt, 10117 Berlin")
+plant_two =Plant.create!(name:"bamboo", description:"very beautiful bamboo plant", user: user_two, address: "Charitépl. 1, 10117 Berlin")
+plant_three =Plant.create!(name:"boston fern", description:"It's fantastic fern plant", user: user_three, address: "Schöneberger Str. 23A, 10963 Berlin")
+plant_four =Plant.create!(name:"palm", description:"its a very palm plant", user: user_four, address: "Eisenbahnstraße 42/43, 10997 Berlin")
 
 
 booking_one = Booking.create!(date: "1.2.2020", user: user_one, plant: plant_one)
