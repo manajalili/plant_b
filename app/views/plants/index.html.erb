@@ -6,11 +6,19 @@
           <div class="name">
             <span class="mr-3"><%= link_to plant.name, plant_path(plant) %></span>
             <%= plant.price %> euro
-          </div>  
+          </div>
           <%= plant.description %>
       </div>
     <% end %>
   </div>
+
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 </div>
 
 
