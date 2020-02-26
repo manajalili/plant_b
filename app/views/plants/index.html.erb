@@ -2,10 +2,11 @@
   <div class="plants">
     <% @plants.each do |plant| %>
       <div class="plant">
-        <%= cl_image_tag plant.photo.key, height: 400, width: 400, crop: :fill %>
+        <%= cl_image_tag plant.photo.key, height: 200, width: 200, crop: :fill %>
           <div class="name">
-            <%= link_to plant.name, plant_path(plant) %>
-          </div>
+            <span class="mr-3"><%= link_to plant.name, plant_path(plant) %></span>
+            <%= plant.price %> euro
+          </div>  
           <%= plant.description %>
       </div>
     <% end %>
