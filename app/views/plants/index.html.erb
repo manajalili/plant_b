@@ -4,7 +4,8 @@
       <div class="plant">
         <%= cl_image_tag plant.photo.key, height: 200, width: 200, crop: :fill %>
           <div class="name">
-            <%= link_to plant.name, plant_path(plant) %>
+            <p><%= link_to plant.name, plant_path(plant) %></p>
+            <%= plant.price %> euro
           </div>  
           <%= plant.description %>
       </div>
