@@ -1,6 +1,10 @@
 class PlantsController < ApplicationController
   def index
-    @plants = Plant.all
+    if params[:query].present?
+      @plants = Plant.where(name: params[:query])
+    else
+      @plants = Plant.all
+    end
   end
 
   def show
