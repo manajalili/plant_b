@@ -1,11 +1,16 @@
 .plant {
     text-align: center;
-    background-color: rgba(212, 243, 176, 0.726);
     border-radius: 5px;
     padding: 8px;
 }
 
+.plants{
+    margin-top: 16px;
+}
+
 .name {
     font-weight: Bold ;
-    color: green($color: #023f23);
+    color: green($color: #4c6663);
 }
+
+

@@ -12,7 +12,7 @@ class PlantsController < ApplicationController
     end
 
     if params[:query].present?
-      @plants = Plant.where(name: params[:query])
+      @plants = Plant.where("name ILIKE ?", "%#{params[:query]}%")
     else
       @plants = Plant.all
     end
