@@ -18,10 +18,10 @@ user_four = User.create!(email: "mattia@gmail.com" , password: "123456")
 user_three = User.create!(email: "mason@gmail.com" , password: "123456")
 
 
-plant_one = Plant.create!(name:"orchids", description:"its a very nice orchid plant", user: user_one )
-plant_two =Plant.create!(name:"bamboo", description:"very beautiful bamboo plant", user: user_two )
-plant_three =Plant.create!(name:"boston fern", description:"It's fantastic fern plant", user: user_three )
-plant_four =Plant.create!(name:"palm", description:"its a very palm plant", user: user_four )
+plant_one = Plant.create!(name:"Orchids", description:"It's a very nice orchid plant", user: user_one )
+plant_two =Plant.create!(name:"Bamboo", description:"Very beautiful bamboo plant", user: user_two )
+plant_three =Plant.create!(name:"Boston Fern", description:"It's fantastic fern plant", user: user_three )
+plant_four =Plant.create!(name:"Palm", description:"It's a very palm plant", user: user_four )
 
 
 booking_one = Booking.create!(date: "1.2.2020", user: user_one, plant: plant_one)
