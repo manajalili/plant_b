@@ -29,4 +29,19 @@
 </div>
 
 
+<h3>Book This Plant</h3>
+<%= simple_form_for([@plant, @booking]) do |f| %>
+  <%= f.hidden_field :plant_id, value: @plant.id %>
+  <%= f.input :date %>
+  <%= f.button :submit %>
+<% end %>
+
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
 

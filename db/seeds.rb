@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }]).
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "open-uri"
@@ -18,10 +18,11 @@ user_four = User.create!(email: "mattia@gmail.com" , password: "123456")
 user_three = User.create!(email: "mason@gmail.com" , password: "123456")
 
 
-plant_one = Plant.create!(name:"Orchids", description:"It's a very nice orchid plant", price: 5, user: user_one )
-plant_two =Plant.create!(name:"Bamboo", description:"Very beautiful bamboo plant", price: 4, user: user_two )
-plant_three =Plant.create!(name:"Boston Fern", description:"It's fantastic fern plant", price: 3, user: user_three )
-plant_four =Plant.create!(name:"Palm", description:"It's a very palm plant", price: 5, user: user_four )
+
+plant_one = Plant.create!(name:"Orchids", description:"It's a very nice orchid plant", price: 5, user: user_one , address: "Gendarmenmarkt, 10117 Berlin")
+plant_two =Plant.create!(name:"Bamboo", description:"Very beautiful bamboo plant", price: 4, user: user_two , address: "Charitépl. 1, 10117 Berlin")
+plant_three =Plant.create!(name:"Boston Fern", description:"It's fantastic fern plant", price: 3, user: user_three , address: "Schöneberger Str. 23A, 10963 Berlin")
+plant_four =Plant.create!(name:"Palm", description:"It's a very palm plant", price: 5, user: user_four , address: "Eisenbahnstraße 42/43, 10997 Berlin")
 plant_5 =Plant.create!(name:"Snake Plant", description:"Filter your indoor air!", price: 7, user: user_four )
 plant_6 =Plant.create!(name:"Rose", description:"Smells like Chanel No.5", price: 5, user: user_four )
 plant_7 =Plant.create!(name:"Flamingo", description:"It's filter the air!", price: 5, user: user_four )

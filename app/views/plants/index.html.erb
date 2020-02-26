@@ -1,6 +1,6 @@
 <div class="container">
   <div class="plants">
-    <% @plants.each do |plant| %>    
+    <% @plants.each do |plant| %>
       <div class="plant">
         <%= cl_image_tag plant.photo.key, height: 200, width: 200, crop: :fill %>
           <div class="name">
@@ -12,4 +12,5 @@
     <% end %>
   </div>
 </div>
-  
+
+
