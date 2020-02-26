@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^4.5.1",
-    "@rails/webpacker": "4.2.2",
+    "@rails/webpacker": "3.5",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "mapbox-gl": "^1.8.1",
@@ -11,6 +11,6 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "2.11.2"
   }
 }
