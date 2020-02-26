@@ -1,5 +1,5 @@
 <div class="plant-card">
-  <%= cl_image_tag @plant.photo.key %>
+  <%= cl_image_tag @plant.photo.key, height: 200, width: 200, crop: :fill %>
   <div class="card-infos">
     <div>
       <h2><%= @plant.name.capitalize %></h2>
