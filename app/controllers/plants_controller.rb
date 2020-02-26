@@ -1,7 +1,18 @@
 class PlantsController < ApplicationController
+
   def index
+    @plants = Plant.geocoded
+
+    @markers = @plants.map do |plant|
+      {
+        lat: plant.latitude,
+        lng: plant.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { flat: flat }),
+      }
+    end
+
     if params[:query].present?
-      @plants = Plant.where(name: params[:query])
+      @plants = Plant.where("name ILIKE ?", "%#{params[:query]}%")
     else
       @plants = Plant.all
     end

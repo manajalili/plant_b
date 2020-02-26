@@ -33,3 +33,11 @@
     </div>
   </div>
 </div>
+
+<h3>Book This Plant</h3>
+<%= simple_form_for([@plant, @booking]) do |f| %>
+  <%= f.hidden_field :plant_id, value: @plant.id %>
+  <%= f.input :date %>
+  <%= f.button :submit %>
+<% end %>
+
