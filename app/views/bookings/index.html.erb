@@ -1,7 +1,12 @@
-<div class="container">
-  <div class="bookings">
+<div class="container mt-5">
     <% @bookings.each do |booking| %>
-        <%= booking.date %> €
-    <% end %>
+    <div class="row">
+      <div class="col-6">
+        <%= booking.date %>
+      </div>
+    </div>
+      <% end %>
+      <div class="col-6"></div>
+
   </div>
-  </div>
+
