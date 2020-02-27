@@ -1,13 +1,10 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
 
-  # def index
-  #   @plant = Plant.find(params[:plant_id])
-  #   # today = Date.today
-  #   bookings = @plant.bookings # .where("start_date >= ? OR end_date >= ?", today, today)
+  def index
+    @bookings = Booking.all
 
-  #   render json: bookings
-  # end
+  end
 
   def create
     @booking = Booking.new(booking_params)
