@@ -4,7 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }]).
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.fir
 
 require "open-uri"
 
@@ -19,7 +19,7 @@ user_three = User.create!(email: "mason@gmail.com" , password: "123456")
 
 
 
-plant_one = Plant.create!(name:"Orchids", description:"It's a very nice orchid plant", price: 5, user: user_one , address: "Gendarmenmarkt, 10117 Berlin")
+plant_one = Plant.create!(name:"Orchids", description:"It's a very nice orchid plant", price: 5 , user: user_one , address: "Gendarmenmarkt, 10117 Berlin")
 plant_two =Plant.create!(name:"Bamboo", description:"Very beautiful bamboo plant", price: 4, user: user_two , address: "Charitépl. 1, 10117 Berlin")
 plant_three =Plant.create!(name:"Boston Fern", description:"It's fantastic fern plant", price: 3, user: user_three , address: "Schöneberger Str. 23A, 10963 Berlin")
 plant_four =Plant.create!(name:"Palm", description:"It's a very palm plant", price: 5, user: user_four , address: "Eisenbahnstraße 42/43, 10997 Berlin")
