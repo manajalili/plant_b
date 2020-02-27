@@ -2,7 +2,7 @@
   <div class="plants">
     <% @plants.each do |plant| %>
       <div class="plant">
-        <%= cl_image_tag plant.photo.key%>
+        <%= cl_image_tag plant.photo.key, height: 200, width: 221%>
           <div class="name">
             <button type="button" class="btn btn-outline-secondary"><%= link_to plant.name, plant_path(plant) %></button>
             <p><%= plant.description %></p>
@@ -13,7 +13,7 @@
       </div>
     <% end %>
   </div>
-  
+
   <div class="map-container">
     <div
       id="map"
