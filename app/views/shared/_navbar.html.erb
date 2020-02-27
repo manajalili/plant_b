@@ -9,25 +9,7 @@
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <div class="form-inline">
-        <%= form_tag plants_path, method: :get do %>
-        <!-- <%= text_field_tag :query,
-         params[:query],
-         class: "form-control",
-         placeholder: "Find a plant"
-       %> -->
-       <%= select_tag :query,
-       options_from_collection_for_select(
-         Plant.all, "name", "name",
-         params[:query]),
-         iclude_blank: true,
-         class: "js-exammple-basic-single hidden",
-         id: "plant-search",
-         data: {placeholder: "Find a plant"}
-        %>
-      <%= submit_tag "Search", class: "btn btn-success", id: "plant-submit" %>
-       <% end %>
-      </div>
+      <%= render 'shared/searchbar' %>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", plants_path, class: "nav-link" %>
