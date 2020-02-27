@@ -1,11 +1,9 @@
-.container {
-  display: grid;
-}
+// .container {
+//   display: grid;
+// }
 
-.plant {
-    text-align: center;
-    border-radius: 5px;
-    padding: 8px;
+.container {
+  padding: 15px;
 }
 
 .plants{
@@ -15,9 +13,44 @@
     grid-gap: 16px;
 }
 
-.name {
-    font-weight: Bold ;
-    color: green($color: #4c6663);
+.plant {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.name {
+    font-size: small;
+    color: green($color: #4c6663);
+    padding: 5px 10px;
+}
 
+.price {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  transition: 0.5s;
+  color: white;
+}
+
+.btn {
+  border: 0 solid white;
+  border-radius: 5px;
+}
+
+.map-container {
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
