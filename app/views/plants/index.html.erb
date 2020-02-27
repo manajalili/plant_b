@@ -5,7 +5,7 @@
         <%= cl_image_tag plant.photo.key, height: 200, width: 200, crop: :fill %>
           <div class="name">
             <span class="mr-3"><%= link_to plant.name, plant_path(plant) %></span>
-            <%= plant.price %> euro
+            <%= plant.price %> €
           </div>
           <%= plant.description %>
       </div>
@@ -19,6 +19,7 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
+
 </div>
 
 

@@ -40,12 +40,4 @@ yarn-debug.log*
 *.swp
 .DS_Store
 .env*
-<<<<<<< HEAD
-.env*
-/public/packs
-/public/packs-test
-/node_modules
-yarn-debug.log*
-.yarn-integrity
-=======
->>>>>>> 287f5ff0f5ea622f8d68be015a8737b90a21ae41
+
