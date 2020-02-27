@@ -1,13 +1,15 @@
-<div>
+<div class="container">
   <div class="plants">
     <% @plants.each do |plant| %>
       <div class="plant">
         <%= cl_image_tag plant.photo.key, height: 200, width: 200, crop: :fill %>
           <div class="name">
-            <span class="mr-3"><%= link_to plant.name, plant_path(plant) %></span>
-            <%= plant.price %> €
+            <button type="button" class="btn btn-outline-secondary"><%= link_to plant.name, plant_path(plant) %></button>
+            <p><%= plant.description %></p>
           </div>
-          <%= plant.description %>
+        <div class="price">
+          <%= plant.price %> €
+        </div>
       </div>
     <% end %>
   </div>
@@ -16,12 +18,11 @@
     <div
       id="map"
       style="width: 100%;
-      height: 400px;"
+      height: 350px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     ></div>
   </div>
 </div>
-
 
 
