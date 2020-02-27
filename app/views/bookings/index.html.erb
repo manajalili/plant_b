@@ -1,12 +1,28 @@
 <div class="container mt-5">
     <% @bookings.each do |booking| %>
-    <div class="row">
-      <div class="col-6">
-        <%= booking.date %>
-      </div>
+    <div class="row border mb-3 py-3">
+      <div class="col-9">
+        <p>Booked for: <%= booking.date %></p>
+        <div class="d-flex ">
+          <%= cl_image_tag booking.plant.photo.key, height: 80, width: 80, crop: :fillf %>
+          <div class="d-flex flex-column mx-3 ">
+         <strong> <%= booking.plant.name %> </strong>
+          <%= booking.plant.description %>
+          </div>
+       </div>
     </div>
-      <% end %>
-      <div class="col-6"></div>
 
-  </div>
+
+     <div class="col-3 border-left">
+       <strong> <%= booking.plant.price %> €</strong>
+        <br>
+        <%= link_to "Edit", plant_path(booking.plant)%>
+        <br>
+        <%= link_to "Remove", booking_path(booking), method: :delete, data: {confirm:"You are about to remove this booking from our booking list"} %>
+
+     </div>
+   </div>
+      <% end %>
+
+</div>
 
