@@ -1,41 +1,59 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-8">
-      <div class="plant-card">
-        <%= cl_image_tag @plant.photo.key, height: 200, width: 200, crop: :fillf %>
-        <div class="card-infos">
-          <div>
-            <h2><%= @plant.name.capitalize %></h2>
-            <p><%= @plant.description %></p>
+      <div class="col-xs-12 col-md-8">
+        <div class="plant-card">
+          <%= cl_image_tag @plant.photo.key, height: 200, width: 200, crop: :fillf %>
+          <div class="card-infos">
+            <div>
+              <h2><%= @plant.name.capitalize %></h2>
+              <p><%= @plant.description %></p>
+            </div>
+            <h5>Booking(s)</h5>
+              <ul>
+                <% @bookings.each do |booking| %>
+                  <li><%= booking.date %></li>
+                <% end %>
+              </ul>
           </div>
-          <h5>Booking(s)</h5>
-            <ul>
-              <% @bookings.each do |booking| %>
-                <li><%= booking.date %></li>
-              <% end %>
-            </ul>
         </div>
       </div>
-
-    </div>
-    <div class="col-xs-12 col-md-4">
-        <div class="plant-card">
-          <h3>Book This Plant</h3>
-            <%= simple_form_for([@plant, @booking]) do |f| %>
-              <%= f.hidden_field :plant_id, value: @plant.id %>
-              <%= f.input :date %>
-              <%= f.button :submit, class: "btn btn-success" %>
-            <% end %>
-          <br>
-          <%= link_to "Back", plants_path, class: "btn btn-primary" %>
-        </div>
+  <div class="from-wrapper" style="width: 500px; margin: 0 auto;">
+    <div>
+      <%= simple_form_for :search, method: :get do |f| %>
+        <%= f.input :start_date, label: "Start Date", placeholder: "From" , input_html: { class: "datepickr" } %>
+        <%= f.input :end_date, label: 'End Date', placeholder: "To" , input_html: { class: "datepickr" } %>
+        <%= f.submit "Book", class: "btn btn-primary center" %>
+      <% end %>
     </div>
   </div>
 </div>
 
-<h3>Book This Plant</h3>
-<%= simple_form_for([@plant, @booking]) do |f| %>
-  <%= f.hidden_field :plant_id, value: @plant.id %>
-  <%= f.input :date %>
-  <%= f.button :submit %>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

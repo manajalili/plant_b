@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker', '~> 3.5.5'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
+gem 'bootstrap-datepicker-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

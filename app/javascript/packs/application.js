@@ -7,9 +7,21 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
-import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+// import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
-import { initMapbox } from '../plugins/init_mapbox';
+// import { initMapbox } from '../plugins/init_mapbox';
 
-initMapbox();
+// import " ../plugins/flatpickr"
+
+// import { toggleDateInputs } from '../plugins/booking';
+
+// initMapbox();
+
+// toggleDateInputs();
+
+import flatpickr from 'flatpickr'
+import 'flatpickr/dist/flatpickr.min.css'
+
+flatpickr(".datepickr", {
+  altInput: true
+});
