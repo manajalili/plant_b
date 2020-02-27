@@ -13,3 +13,12 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
+
+import 'select2/dist/css/select2.css';
+import { initSelect2 } from '../components/init_select2';
+initSelect2();
+
+// import 'select2/dist/css/select2.css';
+import { initEntersearch } from '../components/init_entersearch';
+initEntersearch();
+

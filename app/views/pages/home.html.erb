@@ -13,11 +13,23 @@
 
      <div class="form-inline justify-content-center">
        <%= form_tag plants_path, method: :get do %>
-       <%= text_field_tag :query,
+       <!-- <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Greenie Leafie"
-      %>
+        placeholder: "Find a plant"
+      %> -->
+      <%= select_tag :query,
+      options_from_collection_for_select(
+        Plant.all, "name", "name",
+        params[:query]),
+        iclude_blank: true,
+        class: "js-exammple-basic-single",
+        id: "plant-search",
+        data: {placeholder: "Find a plant"}
+       %>
+
+
+
       <%= submit_tag "Search", class: "btn btn-success" %>
       <% end %>
      </div>
