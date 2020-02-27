@@ -1,3 +1,7 @@
+.container {
+  display: grid;
+}
+
 .plant {
     text-align: center;
     border-radius: 5px;
@@ -6,6 +10,9 @@
 
 .plants{
     margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
 }
 
 .name {

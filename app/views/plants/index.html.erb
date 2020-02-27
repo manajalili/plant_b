@@ -1,4 +1,4 @@
-<div class="container">
+<div>
   <div class="plants">
     <% @plants.each do |plant| %>
       <div class="plant">
@@ -12,14 +12,16 @@
     <% end %>
   </div>
 
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-
+  <div class="map-container">
+    <div
+      id="map"
+      style="width: 100%;
+      height: 400px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
 </div>
+
 
 
