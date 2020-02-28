@@ -1,6 +1,18 @@
+// .navbar {
+//   position: fixed;
+//   top: 0;
+//   width:100%;
+// }
+.body {
+  padding-top: 60px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background:linear-gradient(to right, rgba(183, 241, 145, 0.2), rgba(17, 121, 57, 0.342));
+  background:linear-gradient(to right, #E7F3E0, #A7CAB4);
+  width:100%;
+  position:fixed;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
