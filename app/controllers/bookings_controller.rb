@@ -25,12 +25,10 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @plant = Plant.find(params[:plant_id])
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
-    raise
 
-    redirect_to plant_path(@booking.plant)
+    redirect_to bookings_path
   end
 
   def destroy
