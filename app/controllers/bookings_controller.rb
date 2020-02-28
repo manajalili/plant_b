@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     # Find the user
     @booking.user = current_user
     if @booking.save
-      redirect_to @booking.plant, notice: "Your booking has been created..."
+      redirect_to bookings_path, notice: "Your booking has been created..."
     else
       render :new
     end
