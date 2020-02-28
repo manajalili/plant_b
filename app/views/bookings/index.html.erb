@@ -6,8 +6,10 @@
         <div class="d-flex ">
           <%= cl_image_tag booking.plant.photo.key, height: 80, width: 80, crop: :fill %>
           <div class="d-flex flex-column mx-3 ">
-         <strong> <%= booking.plant.name %> </strong>
+          <strong> <%= booking.plant.name %> </strong>
           <%= booking.plant.description %>
+          <br>
+          <strong>Pick up at: </strong>"<%= booking.plant.address %>""
           </div>
        </div>
     </div>
