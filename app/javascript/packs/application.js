@@ -20,6 +20,7 @@
 // toggleDateInputs();
 
 import flatpickr from 'flatpickr'
+import initMapbox from 'plugins/init_mapbox'
 import 'flatpickr/dist/flatpickr.min.css'
 
 flatpickr(".datepickr", {

@@ -29,6 +29,4 @@ const initMapbox = () => {
                                          mapboxgl: mapboxgl }));
       fitMapToMarkers(map, markers);
      }
-   };
-
-   export { initMapbox };
+   };   export { initMapbox };
