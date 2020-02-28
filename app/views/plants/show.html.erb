@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-8">
       <div class="plant-card">
-        <%= cl_image_tag @plant.photo.key, height: 200, width: 200, crop: :fillf %>
+        <%= cl_image_tag @plant.photo.key, height: 200, width: 200, crop: :fill %>
         <div class="card-infos">
           <div>
             <h2><%= @plant.name.capitalize %></h2>
@@ -22,7 +22,6 @@
         <div class="plant-card">
           <h4>Book This Plant</h4>
             <%= simple_form_for([@plant, @booking]) do |f| %>
-              <%= f.hidden_field :plant_id, value: @plant.id %>
               <%= f.input :date, label: @booking.date %>
               <%= f.button :submit, class: "btn btn-success" %>
             <% end %>

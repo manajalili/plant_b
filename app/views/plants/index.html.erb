@@ -2,13 +2,17 @@
   <div class="row">
     <% @plants.each do |plant| %>
       <div class="col-12 col-sm-6 col-md-3">
-        <div class="plant">
-          <%= cl_image_tag plant.photo.key, height: 200, width: 200, crop: :fill %>
+        <div class="plant index-plant-card">
+          <div class="plant-image">
+            <%= cl_image_tag plant.photo.key, height: 200, width: 221%>
+          </div>
             <div class="name">
-              <span class="mr-3"><%= link_to plant.name, plant_path(plant) %></span>
-              <%= plant.price %> €
+              <button type="button" class="btn btn-outline-secondary"><%= link_to plant.name, plant_path(plant) %></button>
+              <p><%= plant.description %></p>
             </div>
-            <%= plant.description %>
+          <div class="price">
+            <%= plant.price %> €
+          </div>
         </div>
       </div>
     <% end %>

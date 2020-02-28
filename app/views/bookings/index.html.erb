@@ -4,7 +4,7 @@
       <div class="col-9">
         <p>Booked for: <%= booking.date %></p>
         <div class="d-flex ">
-          <%= cl_image_tag booking.plant.photo.key, height: 80, width: 80, crop: :fillf %>
+          <%= cl_image_tag booking.plant.photo.key, height: 80, width: 80, crop: :fill %>
           <div class="d-flex flex-column mx-3 ">
          <strong> <%= booking.plant.name %> </strong>
           <%= booking.plant.description %>
@@ -16,7 +16,7 @@
      <div class="col-3 border-left">
        <strong> <%= booking.plant.price %> €</strong>
         <br>
-        <%= link_to "Edit", plant_path(booking.plant)%>
+        <%= link_to "Edit", edit_booking_path(booking)%>
         <br>
         <%= link_to "Remove", booking_path(booking), method: :delete, data: {confirm:"You are about to remove this booking from our booking list"} %>
 

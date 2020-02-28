@@ -7,18 +7,13 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
-import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
-
-import { initMapbox } from '../plugins/init_mapbox';
+import initMapbox from '../plugins/init_mapbox';
+import initSelect2 from '../plugins/init_select2';
+import initEntersearch from '../plugins/init_entersearch';
 
 initMapbox();
 
-import 'select2/dist/css/select2.css';
-import { initSelect2 } from '../components/init_select2';
 initSelect2();
 
-// import 'select2/dist/css/select2.css';
-import { initEntersearch } from '../components/init_entersearch';
 initEntersearch();
 

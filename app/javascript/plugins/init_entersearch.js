@@ -9,4 +9,4 @@ $(document).ready(function(){
 });
 };
 
-export { initEntersearch };
+export default initEntersearch;

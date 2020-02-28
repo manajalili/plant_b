@@ -7,4 +7,4 @@ const initAutocomplete = () => {
   }
 };
 
-export { initAutocomplete };
+export default initAutocomplete;
