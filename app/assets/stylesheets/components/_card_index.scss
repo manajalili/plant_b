@@ -3,6 +3,8 @@
 // }
 
 .index-plant-card {
+border-radius: 10px;
+background-color: white;
   .plant-image {
     max-width: 100%;
     height: 200px;
@@ -11,6 +13,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
+    padding-top: 5px;;
     img {
       object-fit: contain;
     }

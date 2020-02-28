@@ -29,7 +29,7 @@ plant_7 =Plant.create!(name:"Flamingo", description:"It's filter the air!", pric
 plant_8 =Plant.create!(name:"Heneken", description:"A cute skinny plant!", price: 5, user: user_four ,address: "Bülowstraße 56-57, 10783 Berlin")
 plant_9 =Plant.create!(name:"Aloe Vera", description:"it's pretty, it's moisturizing!", price: 5, user: user_four , address: "Kurfürstenstraße 58, 10785 Berlin")
 plant_10 =Plant.create!(name:"Chinese Evergreen", description:"Get that Feng-Shui fixed in you house!", price: 5, user: user_four , address: "Fritz-Wildung-Straße 9, 14199 Berlin")
-plant_11 =Plant.create!(name:"Fig", description:"Amazingly cute fig plant for home", price: 5, user: user_four , address: "Potsdamer Str. 183, 14469 Potsdam")
+plant_11 =Plant.create!(name:"Fig", description:"Amazingly cute fig plant for home", price: 5, user: user_four)
 
 
 booking_one = Booking.create!(user: user_one, plant: plant_one)

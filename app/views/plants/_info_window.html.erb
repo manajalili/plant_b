@@ -1,2 +1,4 @@
-<h2><%= plant.name %></h2>
-<h2><%= plant.price %> €</h2>
+<%= cl_image_tag plant.photo.key, height: 100, width: 100%>
+<p><%= link_to plant.name, plant_path(plant) %> <%= plant.price %> €<p>
+
+
