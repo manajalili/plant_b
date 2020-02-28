@@ -43,7 +43,8 @@ input[type="text"]:focus {
   border-bottom: 1px solid #BBB;
   cursor: text;
 }
-input[type="submit"] {
+
+input[name=search_submit] {
   height: 50px;
   width: 50px;
   display: inline-block;
