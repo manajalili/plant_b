@@ -18,15 +18,16 @@
 // initMapbox();
 
 // toggleDateInputs();
-import {$,jQuery} from 'jquery';
+// import {$,jQuery} from 'jquery';
 
-import flatpickr from 'flatpickr'
-import initMapbox from 'plugins/init_mapbox'
-import 'flatpickr/dist/flatpickr.min.css'
+// import flatpickr from 'flatpickr'
+// import 'flatpickr/dist/flatpickr.min.css';
+// import { initMapbox from } '../plugins/init_mapbox';
 
-flatpickr(".datepickr", {
-  altInput: true,
-   enableTime: true
-});
 
-initMapbox();
+// flatpickr(".datepickr", {
+//   altInput: true,
+//    enableTime: true
+// });
+
+// initMapbox();
