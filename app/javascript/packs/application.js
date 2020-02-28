@@ -17,3 +17,12 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 toggleDateInputs();
 initMapbox();
+
+import 'select2/dist/css/select2.css';
+import { initSelect2 } from '../components/init_select2';
+initSelect2();
+
+// import 'select2/dist/css/select2.css';
+import { initEntersearch } from '../components/init_entersearch';
+initEntersearch();
+

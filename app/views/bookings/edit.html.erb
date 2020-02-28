@@ -1,0 +1,4 @@
+<%= simple_form_for([@plant, @booking]) do |f| %>
+  <%= f.input :date, label: @booking.date %>
+  <%= f.button :submit, class: "btn btn-success" %>
+<% end %>
