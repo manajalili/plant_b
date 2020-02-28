@@ -9,10 +9,9 @@
 
   <div class='home-banner'>
     <h1>Plant B</h1>
-    <h3>Need to rent a <span style="color: rgb(39, 221, 63)">greenie</span> leafie? We've got your back!</h3>
+    <h3>Need to rent a <span style="color:#1EDD88">greenie</span> leafie? We've got your back!</h3>
 
-     <div class="form-inline justify-content-center">
-       <%= form_tag plants_path, method: :get do %>
+       <%= form_tag plants_path, method: :get, class: "form-inline homepage-form justify-content-center " do %>
        <!-- <%= text_field_tag :query,
         params[:query],
         class: "form-control",
@@ -32,7 +31,6 @@
 
       <%= submit_tag "Search", class: "btn btn-success", id: "plant-submit" %>
       <% end %>
-     </div>
 </div>
 
 </body>
