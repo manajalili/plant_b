@@ -9,18 +9,28 @@
 
   <div class='home-banner'>
     <h1>Plant B</h1>
-    <h3>Need to rent a greenie leafie? Look for it here:</h3>
+    <h3>Need to rent a <span style="color:#1EDD88">greenie</span> leafie? We've got your back!</h3>
 
-     <div class="form-inline justify-content-center">
-       <%= form_tag plants_path, method: :get do %>
-       <%= text_field_tag :query,
+       <%= form_tag plants_path, method: :get, class: "form-inline homepage-form justify-content-center " do %>
+       <!-- <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Greenie Leafie"
-      %>
-      <%= submit_tag "Search", class: "btn btn-success" %>
+        placeholder: "Find a plant"
+      %> -->
+      <%= select_tag :query,
+      options_from_collection_for_select(
+        Plant.all, "name", "name",
+        params[:query]),
+        iclude_blank: true,
+        class: "js-exammple-basic-single",
+        id: "plant-search",
+        data: {placeholder: "Find a plant 🌱"}
+       %>
+
+
+
+      <%= submit_tag "Search", class: "btn btn-success", id: "plant-submit" %>
       <% end %>
-     </div>
 </div>
 
 </body>

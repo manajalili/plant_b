@@ -1,4 +1,18 @@
 body {
-  // background-image: url("https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80");
-  background: white;
+  text-align: center;
 }
+.homepage-form {
+  text-align: center;
+  width: 57%;
+  display: inline-flex;
+  padding: 0 25px;
+  .select2-container {
+    flex-grow: 2;
+  }
+  .select2-selection--single {
+    height: 40px !important;
+    & > * {
+      line-height: 40px !important;
+      height: 40px !important;
+    }
+  }
