@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  # added on June 2021 to allow public view 
+  before_action :authenticate_user!, :except => [:index]
 
     def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
